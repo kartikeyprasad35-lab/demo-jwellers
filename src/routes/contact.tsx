@@ -1,0 +1,4 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { PageIntro, ShowroomSection } from '@/components/store/storefront';
+export const Route = createFileRoute('/contact')({ head: () => ({ meta: [{ title: 'Visit & Contact — Royal Aurum' }, { name: 'description', content: 'Plan your Royal Aurum showroom visit and enquire about jewellery. Verified showroom contact and location details coming soon.' }, { property: 'og:title', content: 'Visit & Contact — Royal Aurum' }, { property: 'og:description', content: 'A personal showroom experience for discovering your next precious piece.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }), component: ContactPage });
+function ContactPage() { return <main><PageIntro eyebrow="WE WOULD LOVE TO WELCOME YOU" title="Let’s Find Something Precious" text="Your jewellery journey begins with a personal conversation." /><ShowroomSection /></main>; }

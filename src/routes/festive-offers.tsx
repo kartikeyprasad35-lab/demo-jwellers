@@ -1,0 +1,4 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { FestiveOffers, ShowroomSection } from '@/components/store/storefront';
+export const Route = createFileRoute('/festive-offers')({ head: () => ({ meta: [{ title: 'Festive Jewellery & Offers — Royal Aurum' }, { name: 'description', content: 'Discover Diwali, Dhanteras, Navratri and bridal jewellery at Royal Aurum. Enquire in store for confirmed festive offers.' }, { property: 'og:title', content: 'Festive Jewellery & Offers — Royal Aurum' }, { property: 'og:description', content: 'Celebrate your traditions with exceptional jewellery. Upcoming collection details and offers await showroom confirmation.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }), component: OffersPage });
+function OffersPage() { return <main><FestiveOffers standalone /><ShowroomSection /></main>; }
